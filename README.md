@@ -135,7 +135,7 @@
 > |4|1413912|"18F-CPEG222-010: MICROPROCESSOR SYSTEMS"|"https://udel.instructure.com/feeds/calendars/course_b1dBq4kglviZmCEQet2jexe4EyusdkaSqvj3dB3F.ics"|"b1dBq4kglviZmCEQet2jexe4EyusdkaSqvj3dB3F"|
 > |...|...|...|...|...|
 
-## udcanvas.getCalendar(course_id = 1375937);
+## udcanvas.getCalendar(course_id = 1375937)
 > ```js
 > var calendar = udcanvas.getCalendar(course_id = 1375937);> ```> > ```js> console.log(JSON.stringify(calendar, null, 2));> ```
 >
@@ -168,7 +168,7 @@
 > |6|5939089|"2017-09-19T03:59:59Z"|"points"|"Lab 2"|"https://udel.instructure.com/courses/1375937/assignments/5939089"|
 > |...|...|...|...|...|...|
 
-## udcanvas.getAssignment(course_id = 1375937, assignment_id = 5939029);
+## udcanvas.getAssignment(course_id = 1375937, assignment_id = 5939029);
 > ```js
 > var assignment = udcanvas.getAssignment(course_id = 1375937, assignment_id = 5939029);
 > ```
