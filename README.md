@@ -70,7 +70,8 @@
 |5|1417869|"2018-08-28T16:44:44Z"|"18F-ELEG205-010: ANALOG CIRCUITS I"|"18F-ELEG205-010"|
 |...|...|...|...|...|
 
-## udcanvas.getCourse(course_id)> ```js
+## udcanvas.getCourse(course_id)
+> ```js
 > var course = udcanvas.getCourse(course_id = 1375937);
 > ```
 > 
@@ -115,7 +116,7 @@
     ...
   ]
 }
-```
+> ```
 
 ## udcanvas.getCalendars()
 > ```js
@@ -125,7 +126,6 @@
 > ```js
 > console.table(calendars, ['course_id', 'name', 'ics', 'uuid']);
 > ```
->
 |(index)|course_id|name|ics|uuid|
 |:---|:---|:---|:---|:---|
 |0|1375937|"17F-CISC106-010/011/012: GEN COMPUTER SCIEN FOR ENGNR"|"https://udel.instructure.com/feeds/calendars/course_7k6YOF6VZ5vKjrGPAd7ZebKSzK3mpiTtBRbC4O61.ics"|"7k6YOF6VZ5vKjrGPAd7ZebKSzK3mpiTtBRbC4O61"|
@@ -146,7 +146,7 @@
   "name": "17F-CISC106-010/011/012: GEN COMPUTER SCIEN FOR ENGNR",
   "uuid": "7k6YOF6VZ5vKjrGPAd7ZebKSzK3mpiTtBRbC4O61"
 }
-```
+> ```
 
 ## udcanvas.getAssignments(course_id = 1375937)
 > ```js
@@ -188,7 +188,7 @@
   "submissions_download_url": "https://udel.instructure.com/courses/1375937/assignments/5939029/submissions?zip=1",
   "grading_type": "points"
 }
-```
+> ```
 
 ## udcanvas.coursesRAW;
 The `udcanvas.coursesRAW` object contains all of the raw data and additional (assignments, calendars, etc) data.
