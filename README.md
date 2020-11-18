@@ -98,4 +98,3 @@
 ```
 ## udcanvas.coursesRAW;The `udcanvas.coursesRAW` object contains all of the raw data and additional (assignments, calendars, etc) data.Use if you really need additional data.
 
-
