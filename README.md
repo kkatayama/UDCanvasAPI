@@ -137,7 +137,11 @@
 
 ## udcanvas.getCalendar(course_id = 1375937)
 > ```js
-> var calendar = udcanvas.getCalendar(course_id = 1375937);> ```> > ```js> console.log(JSON.stringify(calendar, null, 2));> ```
+> var calendar = udcanvas.getCalendar(course_id = 1375937);
+> ```
+> 
+> ```js> console.log(JSON.stringify(calendar, null, 2));
+> ```
 >
 > ```js
 > {
