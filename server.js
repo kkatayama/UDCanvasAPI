@@ -4,7 +4,7 @@ var express = require('express');
 var https = require("https");
 var app = express();
 
-app.use('/js', express.static('js'));
+app.use('.', express.static('.'));
 
 // http://localhost
 app.get('/', function(req, res) {
@@ -13,9 +13,9 @@ app.get('/', function(req, res) {
     html += '<html>';
     html += '<head>';
     html += '<title>Get Courses TEST </title>';
-    html += '<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
+    html += '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
     html += '<script>var access_token="'+access_token+'";</script>';
-    html += '<script src="/js/UDCanvasAPI.js"></script>';
+    html += '<script src="UDCanvasAPI.js"></script>';
     html += '</head>';
     html += '<body>';
     html += '<a href="/courses">';
