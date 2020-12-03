@@ -1,6 +1,7 @@
 # UDCanvasAPI Usage
-> Note: The `udcanvas` javascript object is globally accessible.
-> For now, these functions return all of the available data because I am not sure which variables are needed and which are not.> In the future you may want to filter only needed variables.Currently, the UDCanvasAPI offers these helper functions.
+> Note: The `udcanvas` javascript object is globally accessible.</br>
+> For now, these functions return all of the available data because I am not sure which variables are needed and which are not.</br>
+> In the future you may want to filter only needed variables.Currently, the UDCanvasAPI offers these helper functions.
 
 ## Functions()
 |function|value|
@@ -137,7 +138,12 @@
 
 ## udcanvas.getCalendar(course_id = 1375937)
 > ```js
-> var calendar = udcanvas.getCalendar(course_id = 1375937);> ```> > ```js> console.log(JSON.stringify(calendar, null, 2));> ```
+> var calendar = udcanvas.getCalendar(course_id = 1375937);
+> ```
+> 
+> ```js
+> console.log(JSON.stringify(calendar, null, 2));
+> ```
 >
 > ```js
 > {
