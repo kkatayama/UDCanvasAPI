@@ -1,19 +1,19 @@
-var udcanvas = new UDCanvasAPI(access_token).load();
+var udcanvas = new UDCanvasAPI(access_token);
 
 function UDCanvasAPI(access_token) {
     this.token  = access_token;
     this.api    = 'https://udel.instructure.com/api/v1';
-    this.cors   = 'http://www.whateverorigin.org/get?url=';
+    this.cors   = 'https://sokotaro.hopto.org/proxy?url=';
     this.params = "?per_page=100&access_token=";
     this.loadResources = function(resource) {
         var that = this;
-        url = this.cors+encodeURIComponent(this.api+resource+this.params+this.token)+"&callback=?";
+        url = this.cors+encodeURIComponent(this.api+resource+this.params+this.token);
 
         $.getJSON(url).done( function(data) {
             that.coursesRAW  = [];
             that.courses     = [];
             that.calendars   = [];
-            $.each(JSON.parse(data.contents), function(i, e) {
+            $.each(data, function(i, e) {
                 if (e.hasOwnProperty('name')) {
                   	e.calendar['course_id'] = e.id;
                     e.calendar['name'] = e.name;
@@ -22,9 +22,9 @@ function UDCanvasAPI(access_token) {
                   	that.calendars.sort(function(a,b){ return a.course_id - b.course_id; });
 
                     var resource2 = '/courses/'+e.id+'/assignments';
-                    var url2 = that.cors+encodeURIComponent(that.api+resource2+that.params+that.token)+'&callback=?';
+                    var url2 = that.cors+encodeURIComponent(that.api+resource2+that.params+that.token);
                     $.getJSON(url2).done( function(data2) {
-                        e.assignments = JSON.parse(data2.contents);
+                        e.assignments = data2;
                         e.assignments.sort(function(a,b){ return a.id - b.id; });
                         that.coursesRAW.push(e);
                         that.coursesRAW.sort(function(a,b){ return a.id - b.id; });
@@ -91,4 +91,5 @@ function UDCanvasAPI(access_token) {
             return a.assignment_id === assignment_id;
         })[0];
     };
+    this.load();
 }

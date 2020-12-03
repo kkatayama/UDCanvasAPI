@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Get Courses TEST</title>
+        <link rel="stylesheet" href="">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var access_token="25~LDtz4FPmgvVumQULtrkjOUrdQvKnniad2r56u33mCOqZHNjnnB2wIkScp8c56F8E";
+        </script>
+        <script src="UDCanvasAPI.js"></script>
+    </head>
+    <body>
+        <button id="courses_button" style="height:100px;width:300px;margin: 0 auto;display: block;">
+            Click Here to Get Courses
+        </button>
+        <div id="results" style="width:1200px;margin: 0 auto;display: block;">
+            <table class="blueTable">
+                <thead>
+                    <tr><th>course_id</th><th>start_at</th><th>name</th><th>course_code</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <script>
+         $(document).ready(function () {
+             $("#courses_button").on("click", function() {
+                 var courses = udcanvas.getCourses();
+                 console.table(courses, ["course_id", "start_at", "name", "course_code"]);
+                 $.each(courses, function(index, course) {
+                     var course_id   = course['course_id'];
+                     var start_at    = course['start_at'];
+                     var name        = course['name'];
+                     var course_code = course['course_code'];
+                     $("tbody").append(`<tr><td>${course_id}</td><td>${start_at}</td><td>${name}</td><td>${course_code}</td></tr>`)
+                 });
+             });
+         });
+        </script>
+    </body>
+</html>
