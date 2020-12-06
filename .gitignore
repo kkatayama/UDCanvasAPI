@@ -1,6 +1,8 @@
 # Configs
 config.js
 
+# public/index.html
+
 # Logs
 logs
 *.log
