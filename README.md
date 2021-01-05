@@ -1,7 +1,16 @@
-# UDCanvasAPI Usage
+# UDCanvasAPI
 > Note: The `udcanvas` javascript object is globally accessible.</br>
 > For now, these functions return all of the available data because I am not sure which variables are needed and which are not.</br>
 > In the future you may want to filter only needed variables.Currently, the UDCanvasAPI offers these helper functions.
+
+## INSTALL
+Add the following inside the `<head></head>` tags of your html file
+
+```html
+<link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/kkatayama/UDCanvasAPI/main/public/blueTable.css">
+<script src="https://sokotaro.hopto.org/UDCanvasAPI/init.js"></script>
+<script src="https://rawcdn.githack.com/kkatayama/UDCanvasAPI/main/public/UDCanvasAPI.js"></script>
+```
 
 ## Functions()
 |function|value|
