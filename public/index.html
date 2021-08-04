@@ -21,6 +21,7 @@
 
         <script>
          $(document).ready(function () {
+             var udcanvas = new UDCanvasAPI(access_token);
              $("#courses_button").on("click", function() {
                  var courses = udcanvas.getCourses();
                  console.table(courses, ["course_id", "start_at", "name", "course_code"]);
